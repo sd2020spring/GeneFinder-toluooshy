@@ -16,6 +16,7 @@ def shuffle_string(s):
 
 
 def get_complement(nucleotide):
+    #Making sure that complements work properly.
     """
     >>> get_complement("A")
     'T'
@@ -36,6 +37,7 @@ def get_complement(nucleotide):
 
 
 def get_reverse_complement(dna):
+    #Making sure that reverse strand operates properly.
     """
     >>> get_reverse_complement("ATGCCCGCTTT")
     'AAAGCGGGCAT'
@@ -52,6 +54,7 @@ def get_reverse_complement(dna):
 
 
 def rest_of_ORF(dna):
+    #Making sure start codon can be identified and the stop can get cut off in sets of 3.
     """
     >>> rest_of_ORF("ATGTGAA")
     'ATG'
@@ -79,6 +82,7 @@ def rest_of_ORF(dna):
 
 
 def find_all_ORFs_oneframe(dna):
+    #Making sure that the previous function can generate a list of codons can be returned.
     """
     >>> find_all_ORFs_oneframe("ATGCATGAATGTAGATAGATGTGCCC")
     ['ATGCATGAATGTAGA', 'ATGTGCCC']
@@ -100,6 +104,7 @@ def find_all_ORFs_oneframe(dna):
 
 
 def find_all_ORFs(dna):
+    #Making sure that the previous function can be used to parse through the stand for codons.
     """
     >>> find_all_ORFs("ATGCATGAATGTAG")
     ['ATGCATGAATGTAG', 'ATGAATGTAG', 'ATG']
@@ -118,6 +123,7 @@ def find_all_ORFs(dna):
 
 
 def find_all_ORFs_both_strands(dna):
+    #Making sure virtually all the prevous functions can come together to return ORFs of both DNA strands.
     """
     >>> find_all_ORFs_both_strands("ATGCGAATGTAGCATCAAA")
     ['ATGCGAATG', 'ATGCTACATTCGCAT']
